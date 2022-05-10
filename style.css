@@ -1,0 +1,71 @@
+h1 {
+    text-align: center;
+    margin: 5px;
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 50px;
+}
+
+body {
+    background-color: #add8e6;  
+    text-align: center;
+}
+
+a.social {
+    text-decoration: none;
+    transition: color .25s;
+    padding-top: 1px;
+    padding: 0;
+    float: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+a.social:hover {
+    color:#54b3d6;
+}
+
+a.title {
+    text-decoration: none;  
+    transition: color .25s;
+    padding-bottom: 1px;
+}
+
+a.title:hover {
+    color:#54b3d6;
+}
+
+a.nav {
+    text-decoration: none; 
+}
+
+.nav {
+    transition: color .25s;
+    font-family: 'Annie Use Your Telescope', cursive;
+    float: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.nav:hover {
+    color: #54b3d6;
+    text-shadow: darkblue;
+}
+
+.main {
+    width: 550px;
+    height: 2000px;
+    border: 1px solid gray;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;   
+    margin-top: 5px;  
+    top: 50%;
+    bottom: 50%;
+    background-color: #54b3d6;
+}
