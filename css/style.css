@@ -1,12 +1,12 @@
 h1 {
     text-align: center;
     margin: 5px;
-    font-family: 'Annie Use Your Telescope', cursive;
+    font-family: 'EB Garamond';
     font-size: 50px;
 }
 
 body {
-    background-color: #add8e6;  
+    background-color: #949494;  
     text-align: center;
 }
 
@@ -24,17 +24,20 @@ a.social {
 }
 
 a.social:hover {
-    color:#54b3d6;
+    color : #515151;
+    text-shadow: 0.5px 0.5px black;
 }
 
 a.title {
+    color : rgb(49, 49, 49);
     text-decoration: none;  
     transition: color .25s;
     padding-bottom: 1px;
 }
 
 a.title:hover {
-    color:#54b3d6;
+    color : #515151;
+    text-shadow: 1px 1px black;
 }
 
 a.nav {
@@ -43,7 +46,7 @@ a.nav {
 
 .nav {
     transition: color .25s;
-    font-family: 'Annie Use Your Telescope', cursive;
+    font-family: 'EB Garamond';
     float: center;
     color: #f2f2f2;
     text-align: center;
@@ -53,8 +56,9 @@ a.nav {
 }
 
 .nav:hover {
-    color: #54b3d6;
-    text-shadow: darkblue;
+    color: #515151;
+    text-shadow: 0.5px 0.5px black;
+
 }
 
 .main {
