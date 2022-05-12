@@ -65,3 +65,19 @@ function onWindowResize(){
     renderer.setSize(window.innerWidth, window.innerHeight);
     camera.updateProjectionMatrix()
 }
+
+
+//footer
+
+soundOn = false;
+
+document.getElementById("SoundToggle").onclick() = function() {
+    soundOn=!soundOn;
+    if(soundOn) {
+        document.getElementById("SoundToggle").innerHTML = "<i class=\"fa-solid fa-volume\"></i>";
+    }
+    else {
+        document.getElementById("SoundToggle").innerHTML = "<i class=\"fa-solid fa-volume-slash\"></i>";
+    }
+
+}

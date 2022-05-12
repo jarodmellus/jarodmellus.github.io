@@ -21,7 +21,8 @@ a.social {
     float: center;
     color: #f2f2f2;
     text-align: center;
-    padding: 5px 5px;
+    padding-top: 0px;
+    padding-bottom: 5px;
     text-decoration: none;
     font-size: 28px;
 }
@@ -97,8 +98,6 @@ a.nav {
     background-color: #54b3d6;
 }
 
-
-
 #threeCanvas {
     position: absolute;
     top: 0;
@@ -108,3 +107,50 @@ a.nav {
     display: block;
     z-index:-1;
  }
+
+ .footer {
+    text-decoration: none;
+    position:fixed;
+    left:0px;
+    bottom:25px;
+    height:30px;
+    width: 100%;
+    color: whitesmoke;
+ }
+
+
+ a.ThreeToggle,
+ a.SoundToggle {
+    font-family: 'EB Garamond';
+    text-decoration: none;
+    float: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-size: 28px;
+    border: none;
+    background-color: inherit;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+ }
+
+ a.ThreeToggle:hover,
+ a.SoundToggle:hover  {
+    color: rgb(91, 91, 91);
+    text-shadow: 0.5px 0.5px black;
+
+ }
+
+ .button {
+     border: 0px;
+ }
+
+ /*
+ * html #footer {
+    position: absolute;
+    top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop)) + 'px');
+ }
+ */
