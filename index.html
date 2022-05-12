@@ -1,45 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/53e3a5eea4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/53e3a5eea4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="importmap">
+      {
+          "imports": {
+              "three": "https://unpkg.com/three@0.138.0/build/three.module.js",
+              "GLTFLoader": "https://unpkg.com/three@0.138.0/examples/jsm/loaders/GLTFLoader.js"
+          }
+      }
+  </script>
+    <script type = "module" src="/main.js"></script>
+    
     <title>Jarod Mellus</title>
   </head>
-  <body>
-    <a class="title" href="#"><h1>jarod mellus</h1></a>
+  <div id="all">
+    <canvas id="threeCanvas"></canvas>
+    <header>
+      <a class="title" href="#">jarod mellus</a>
 
-    <!---Social Media--->
-    <div id = "social+media">
-      <a class="social" href="https://jarodmellus.itch.io/">
-        <i class="fa-brands fa-itch-io"></i>
-      </a>
-      <a  class="social" href="https://twitter.com/JarodMellus/">
-        <i class="fa-brands fa-twitter"></i>
-      </a>
-      <a class="social" href="https://www.youtube.com/user/JarodsClaymation/featured">
-        <i class="fa-brands fa-youtube"></i>
-      </a>
-    </div>
+      <!---Social Media--->
+      <div id="social+media">
+        <a
+          class="social"
+          href="https://www.linkedin.com/in/jarod-mellus-120053167/"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a class="social" href="https://jarodmellus.itch.io/">
+          <i class="fa-brands fa-itch-io"></i>
+        </a>
+        <a class="social" href="https://twitter.com/JarodMellus/">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a
+          class="social"
+          href="https://www.youtube.com/user/JarodsClaymation/featured"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
 
-    <div id = "navigation">
-      <a class = "nav" href="#">Home</a>
-      <a class = "nav" href="#about">About</a>
-      <a class = "nav" href="#works">Works</a>
-      <a class = "nav" href="#contact">Contact</a>
-    </div>
+      <div id="navigation">
+        <a class="nav" href="#">Home</a>
+        <a class="nav" href="#about">About</a>
+        <a class="nav" href="#works">Works</a>
+        <a class="nav" href="#contact">Contact</a>
+      </div>
 
-    <div class = "home">
-      
-    </div>
+      <div class="home"></div>
 
-    <div class = "about">
-
-    </div>
-
-    <div class
-  </body>
+      <div class="about"></div>
+    </header>
+    <body>
+     
+    </body>
+</div>
 </html>
