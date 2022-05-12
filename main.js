@@ -25,13 +25,26 @@ const material = new THREE.MeshBasicMaterial( {color: 0x7B3F55} );
 const cube = new THREE.Mesh( geometry, material );
 cube.rotateY(5)
 
+const directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
+directionalLight.position.set( 0, 1, 0 );
+scene.add( directionalLight );
+
 const loader = new GLTFLoader();
+let obj;
+loader.load( './models/cafe.glb', function ( gltf ) {
+    console.log("hello");
+    obj = gltf;
+    obj.scene.scale.set(1,1,1);
+	scene.add( obj.scene );
+    
 
-const loadedData = loader.load( './models/cafe.glb', function ( gltf ) {
+}, 	// called while loading is progressing
+function ( xhr ) {
 
-	scene.add( gltf.scene );
+    console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
 
-}, undefined, function ( error ) {
+},
+undefined, function ( error ) {
 
 	console.error( error );
 
@@ -39,7 +52,7 @@ const loadedData = loader.load( './models/cafe.glb', function ( gltf ) {
 
 
 
-scene.add( cube );
+//scene.add( cube );
 renderer.render( scene, camera );
 
 window.addEventListener( 'resize', onWindowResize, false );
@@ -49,5 +62,6 @@ function onWindowResize(){
     camera.fov = Math.atan(window.innerHeight / 2 / camera.position.z) * 2 * THREE.Math.RAD2DEG;
     camera.aspect = window.innerWidth / window.innerHeight;
     renderer.setViewport(0, 0, window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
     camera.updateProjectionMatrix()
 }

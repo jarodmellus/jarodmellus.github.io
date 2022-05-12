@@ -35,12 +35,26 @@ a.title {
     text-align: center;
     font-family: 'EB Garamond';
     color : #f2f2f2;
-    text-decoration: none;  
+    text-decoration: none; 
     transition: color .25s;
     font-size: 65px;
     font-weight: 750;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
+    line-height: 1em;
+}
+
+a.subtitle {
+    text-align: center;
+    font-family: 'EB Garamond';
+    color : #adadad;
+    transition: color .25s;
+    text-decoration: none; 
+    font-size: 15px;
+    font-weight: 750;
+    margin-top: 0%;
+    padding-top: 0%;
+    line-height: 0em;
 }
 
 a.title:hover {
