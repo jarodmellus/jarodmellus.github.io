@@ -34,20 +34,20 @@ a.social:hover {
 
 a.title {
     text-align: center;
-    font-family: 'EB Garamond';
+    font-family: 'IM Fell Great Primer';
     color : #f2f2f2;
     text-decoration: none; 
     transition: color .25s;
     font-size: 65px;
-    font-weight: 750;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    line-height: 1em;
+    font-weight: 500;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    line-height: 1.2em;
 }
 
 a.subtitle {
     text-align: center;
-    font-family: 'EB Garamond';
+    font-family: 'IM Fell Great Primer';
     color : #adadad;
     transition: color .25s;
     text-decoration: none; 
@@ -69,7 +69,7 @@ a.nav {
 
 .nav {
     transition: color .25s;
-    font-family: 'EB Garamond';
+    font-family: 'IM Fell Great Primer';
     float: center;
     color: #f2f2f2;
     text-align: center;
@@ -79,6 +79,7 @@ a.nav {
     
 }
 
+.footerButton:hover,
 .nav:hover {
     color: #515151;
     text-shadow: 0.5px 0.5px black;
@@ -116,38 +117,35 @@ a.nav {
     height:30px;
     width: 100%;
     color: whitesmoke;
+  
  }
 
 
- a.ThreeToggle,
- a.SoundToggle {
-    font-family: 'EB Garamond';
-    text-decoration: none;
-    float: center;
-    color: #f2f2f2;
-    text-align: center;
-    padding-top: 0px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    font-size: 28px;
+
+ .footerButton {
+     font-weight: 900;
+    font-family: 'IM Fell Great Primer';
     border: none;
     background-color: inherit;
+    padding: 14px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;  
+    color: whitesmoke; 
+    transition: color .25s;
+ }
+
+ 
+.jittery span {
+    animation: jitter 200ms linear infinite;
+    color: #f06d06;
     display: inline-block;
-    margin: 0;
-    padding: 0;
- }
-
- a.ThreeToggle:hover,
- a.SoundToggle:hover  {
-    color: rgb(91, 91, 91);
-    text-shadow: 0.5px 0.5px black;
-
- }
-
- .button {
-     border: 0px;
- }
-
+}
+@keyframes jitter {
+    50% {
+      transform: skewY(0.7deg) skewX(-0.7deg) scale(1.006);
+    }
+}
  /*
  * html #footer {
     position: absolute;
