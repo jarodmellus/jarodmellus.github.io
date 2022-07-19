@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,56 +16,62 @@
       src="https://kit.fontawesome.com/53e3a5eea4.js"
       crossorigin="anonymous"
     ></script>
-    <script type="importmap">
-      {
-          "imports": {
-              "three": "https://unpkg.com/three@0.138.0/build/three.module.js",
-              "GLTFLoader": "https://unpkg.com/three@0.138.0/examples/jsm/loaders/GLTFLoader.js"
-          }
-      }
-  </script>
-    <script type = "module" src="/main.js"></script>
+
+    <script type = "text/javascript" src="/main.js"></script>
     
+    <link rel="stylesheet" href="css/style.css" />
     <title>Jarod Mellus</title>
   </head>
   <div id="all">
     <canvas id="threeCanvas"></canvas>
     <header>
-      <a class="title" href="#"><span class="jittery">jarod mellus</span></a><br>
-      <a class="subtitle" href="#">programmer and technical artist</a>
+      <div class="title-bar">
+        <button class="title" onclick="openTab('home')"><span class="jittery">jarod mellus</span></a><br>
+        <h2 class="subtitle">software and game developer</h2>
+      </div>
       <!---Social Media--->
       <div id="social+media">
         <a
           class="social"
           href="https://www.linkedin.com/in/jarod-mellus-120053167/"
-        >
-          <i class="fa-brands fa-linkedin"></i>
+          id = "linkedin"
+          >
+          <i class="fa-brands fa-linkedin" id = "linkedin"></i>
         </a>
-        <a class="social" href="https://jarodmellus.itch.io/">
+        <a class="social" href="https://jarodmellus.itch.io/" id = "itch">
           <i class="fa-brands fa-itch-io"></i>
         </a>
-        <a class="social" href="https://twitter.com/JarodMellus/">
+        <a class="social" href="https://twitter.com/JarodMellus/" id = "twitter">
           <i class="fa-brands fa-twitter"></i>
         </a>
         <a
           class="social"
-          href="https://www.youtube.com/user/JarodsClaymation/featured"
+          href="https://www.youtube.com/user/JarodsClaymation/featured" id = "youtube"
         >
           <i class="fa-brands fa-youtube"></i>
         </a>
       </div>
 
       <div id="navigation">
-        <a class="nav" href="#">home</a>
-        <a class="nav" href="#about">about</a>
-        <a class="nav" href="#works">works</a>
-        <a class="nav" href="#contact">contact</a>
+        <button class="tab" id="homeTab" "w3-bar-item w3-button" onclick="openTab('home')" style="background-color: rgb(60,60,60)">home</button>
+        <button class="tab" id="aboutTab"  "w3-bar-item w3-button"  onclick="openTab('about')">about</button>
+        <button class="tab" id="worksTab"  "w3-bar-item w3-button" onclick="openTab('works')">works</button>
+        <button class="tab" id="contactTab" "w3-bar-item w3-button"  onclick="openTab('contact')">contact</button>
       </div>
 
-      <div class="home"></div>
-
-      <div class="about"></div>
     </header>
+
+    <div class="main">
+      <div id="home" class="page" style="display:inline">
+        <iframe src="https://www.youtube.com/embed/oDeMQCi5bx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/bquKxRjnjkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!--<a href="https://hab79.itch.io/natures-grave">Link to download of game</a>--->
+      </div>
+
+      <div id="about" class="page" style="display:none"></div>
+      <div id="works"class="page" style="display:none"></div>
+      <div id="contact"class="page" style="display:none"></div>
+    </div>
     <body>
      
     </body>

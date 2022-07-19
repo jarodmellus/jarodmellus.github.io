@@ -7,9 +7,16 @@ Media Query Breakpoints:
 *1201px+ larger tvs and screens
 */
 
+:root {
+    --background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    --youtube: darkred;
+    --linkedin: darkblue;
+    --itch: brown;
+    --twitter: lightblue;
+}
+
 body {
-    background-color: #949494;  
-    background: canvas(threeCanvas);
+    background: var(--background);  
     text-align: center;
 }
 
@@ -29,10 +36,27 @@ a.social {
 
 a.social:hover {
     color : #515151;
-    text-shadow: 0.5px 0.5px black;
+    text-shadow: 1px 1px black;
 }
 
-a.title {
+#youtube {
+    color : var(--youtube);  
+}
+
+#itch {
+    color : var(--itch);
+}
+
+#linkedin {
+    color : var(--linkedin);
+}
+
+#twitter {
+    color : var(--twitter);
+}
+
+
+.title {
     text-align: center;
     font-family: 'IM Fell Great Primer';
     color : #f2f2f2;
@@ -43,60 +67,106 @@ a.title {
     margin-top: 2rem;
     padding-top: 1rem;
     line-height: 1.2em;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+
+    margin: 0;
 }
 
-a.subtitle {
+.subtitle {
     text-align: center;
     font-family: 'IM Fell Great Primer';
-    color : #adadad;
+    color : #d7d7d7;
     transition: color .25s;
     text-decoration: none; 
     font-size: 15px;
     font-weight: 750;
     margin-top: 0%;
     padding-top: 0%;
+    border-radius: 0;
     line-height: 0em;
+    position: relative;
+    bottom: 0;
 }
 
-a.title:hover {
+.title-bar {
+    height: 5%;
+}
+
+.title:hover {
     color : #515151;
     text-shadow: 1px 1px black;
 }
 
-a.nav {
-    text-decoration: none; 
-}
 
-.nav {
+.tab {
     transition: color .25s;
+    /*transition: background-color .5s;*/
     font-family: 'IM Fell Great Primer';
     float: center;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: .15rem .5rem;
     text-decoration: none;
     font-size: 28px;
+    background-image: none;
+    border: 0;
+    background-color: transparent;
+    border-radius: .25rem;
     
+
+}
+
+
+.tab:active {
+    color: #515151;
+    text-shadow: 0.5px 0.5px black;
+    background-color: rgb(70, 70, 70);
+
 }
 
 .footerButton:hover,
-.nav:hover {
+.tab:hover {
     color: #515151;
     text-shadow: 0.5px 0.5px black;
+    background-color: gray;
 
 }
 
+.page {
+    position: relative;
+    width: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+}
+
+iframe {
+    width: inherit;
+    margin: inherit;
+
+    padding: .1rem;
+}
+
+.html5-video-player {
+    position: relative;
+    width: auto;
+    margin: auto;   
+    display: inline-block;
+}
+
+.auto-resizable-iframe {
+    max-width: inherit;
+    margin: auto;
+  }
+
 .main {
-    width: 550px;
-    height: 2000px;
-    border: 1px solid gray;
-    padding: 50px;
-    margin-left: auto;
-    margin-right: auto;   
-    margin-top: 5px;  
-    top: 50%;
-    bottom: 50%;
+    position: relative;
+    width: 90%;
+    margin: auto;
     background-color: #54b3d6;
+    height: 100%;
 }
 
 #threeCanvas {
