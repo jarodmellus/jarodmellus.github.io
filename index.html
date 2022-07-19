@@ -22,15 +22,14 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Jarod Mellus</title>
   </head>
-  <div id="all">
-    <canvas id="threeCanvas"></canvas>
+
     <header>
       <div class="title-bar">
-        <button class="title" onclick="openTab('home')"><span class="jittery">jarod mellus</span></a><br>
-        <h2 class="subtitle">software and game developer</h2>
-      </div>
+        <button class="title" onclick="openTab('home')">jarod mellus</a></button>
+     
       <!---Social Media--->
-      <div id="social+media">
+      <div class="social-container">
+        <br>
         <a
           class="social"
           href="https://www.linkedin.com/in/jarod-mellus-120053167/"
@@ -51,6 +50,10 @@
           <i class="fa-brands fa-youtube"></i>
         </a>
       </div>
+      <br>
+      <h2 class="subtitle">software and game developer</h2>
+    </div>
+      <br>
 
       <div id="navigation">
         <button class="tab" id="homeTab" "w3-bar-item w3-button" onclick="openTab('home')" style="background-color: rgb(60,60,60)">home</button>
@@ -61,21 +64,21 @@
 
     </header>
 
-    <div class="main">
-      <div id="home" class="page" style="display:inline">
-        <iframe src="https://www.youtube.com/embed/oDeMQCi5bx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/bquKxRjnjkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <!--<a href="https://hab79.itch.io/natures-grave">Link to download of game</a>--->
-      </div>
-
-      <div id="about" class="page" style="display:none"></div>
-      <div id="works"class="page" style="display:none"></div>
-      <div id="contact"class="page" style="display:none"></div>
-    </div>
     <body>
      
+      <div class="main">
+        <div id="home" class="page" style="display:inline-block">
+          <iframe src="https://www.youtube.com/embed/oDeMQCi5bx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/bquKxRjnjkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!--<a href="https://hab79.itch.io/natures-grave">Link to download of game</a>--->
+        </div>
+
+        <div id="about" class="page" style="display:none"></div>
+        <div id="works"class="page" style="display:none"></div>
+        <div id="contact"class="page" style="display:none"></div>
+    </div>
     </body>
-</div>
+
 <div class="footer"> 
   <div class = "toggle">
     <button id="ThreeToggle" class = "footerButton" type="button">3D<i class="fa-solid fa-cube"></i></button>

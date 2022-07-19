@@ -1,15 +1,23 @@
+selected = "home"
+
 function openTab(page) {
     var i;
     var x = document.getElementsByClassName("tab");
     for (i = 0; i < x.length; i++) {
-        x[i].style.removeProperty('background-color');
+      x[i].style.removeProperty('background-color');
     }
+
+    var y = document.getElementById(selected);
+    y.classList.toggle('collapsed');
+    y.classList.toggle('expanded');
+
     document.getElementById(page + 'Tab').style.backgroundColor = "rgb(40, 40, 40)";
-    var x = document.getElementsByClassName("page");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    document.getElementById(page).style.display = "inline";
+
+    var e = document.getElementById(page)
+    //e.style.display = "inline";
+    e.classList.toggle('collapsed')
+    e.classList.toggle('expanded')
+    selected=page;
 }
 /*
 $(function(){
