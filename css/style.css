@@ -20,9 +20,16 @@ Media Query Breakpoints:
     --twitter: lightblue;
 }
 
+
+
 h1,h2,h3,p {
     font-family: 'IM Fell Great Primer';
     color: whitesmoke;
+}
+
+h1 {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
 html, body {
@@ -87,25 +94,29 @@ a.social:hover {
     /*animation: bounce 2s infinite alternate;*/
 }
 
+/*
 header:hover {
     color : #515151;
     text-shadow: 1px 1px black;
     animation-iteration-count: infinite;
-    animation-duration: .5s;
+    animation-duration: 2s;
     animation-name: text-shadow;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;   
 }
+*/
   
 @keyframes text-shadow {
 
     
     from {
-        text-shadow: 0px 0px black;
+        -webkit-filter: drop-shadow(1px 1px 1px #222);
+        filter: drop-shadow(1px 1px 1px #222);
     }
   
     to {
-        text-shadow: 2px 2px black;
+        -webkit-filter: drop-shadow(4px 4px 4px #222);
+        filter: drop-shadow(4px 4px 4px #222);
     }
 }
 
@@ -169,6 +180,18 @@ header:hover {
     a.social {
         font-size: calc(clamp(3rem,4rem,4rem));
     }
+
+    .page {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .page p {
+        width: 95%;
+        padding: 0;
+        margin: 0;
+    }
     
 }
 
@@ -187,6 +210,8 @@ header:hover {
     a.social {
         font-size: calc(clamp(3rem,4rem,4rem));
     }
+
+
     
 }
 
@@ -236,8 +261,9 @@ header:hover {
 
 
 .title:hover {
-    color : #515151;
-    text-shadow: 1px 1px black;
+    color : #aeaeae;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
 
@@ -284,12 +310,14 @@ header {
     flex-flow: row wrap;  
     justify-content: space-around;
     padding: .2rem;
+    -webkit-filter: drop-shadow(3px 3px 3px #222);
+    filter: drop-shadow(3px 3px 3px #222);
 }
 
 .page p {
     margin: auto;
     min-width: 200px;
-    max-width: 650px;
+    max-width: 800px;
     color: whitesmoke;
     font-family: 'IM Fell Great Primer';
     text-align: left;
@@ -370,7 +398,6 @@ header {
     transition: all .5s;
     top: 0;
     opacity: 100%;
-    margin: auto;
     position: relative;
     display: inline-block;
 
@@ -394,6 +421,8 @@ header {
     max-width: 75%;
     float: left;
     padding: 1rem;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
 #all {
@@ -406,7 +435,7 @@ iframe {
     
     height: fit-content;
     margin: 1rem;
-    border-radius: .5rem;
+    border-radius: 1rem;
     padding: .25rem;
     aspect-ratio: 16 / 9;
     max-width: 100%;
@@ -432,6 +461,7 @@ iframe {
     border-radius: .5rem;
     position: relative;
     width: 95%;
+    padding: 0;
     margin: auto;
     background-color: #54b3d6;
     background: var(--background-page);
