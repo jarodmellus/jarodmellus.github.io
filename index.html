@@ -63,7 +63,20 @@
           <iframe src="https://www.youtube.com/embed/bquKxRjnjkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <!--<a href="https://hab79.itch.io/natures-grave">Link to download of game</a>--->
         </div>
-        <div id="contact" class="page collapsed" ></div>
+        <div id="contact" class="page collapsed" >
+          <form action="./mailProccesor.php"> method="post" enctype="text/plain">
+            Name:<br>
+            <input type="text" name="name"><br>
+            E-mail:<br>
+            <input type="text" name="mail"><br>
+            Comment:<br>
+            <input type="text" name="comment" size="50"><br><br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+            </form>
+            
+
+        </div>
     </div>
     <div class="footer"> 
       <!---Social Media--->

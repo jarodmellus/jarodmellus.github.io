@@ -27,6 +27,7 @@ html, body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 body {
     /*height: 80vh;*/
@@ -61,7 +62,6 @@ a.social {
     height: auto;
     width: auto;
     margin: auto;
-    font-size: calc(clamp(2.25rem,4vw,4rem));
     
 
 }
@@ -77,6 +77,16 @@ a.social:hover {
 
     
     /*animation: bounce 2s infinite alternate;*/
+}
+
+header:hover {
+    color : #515151;
+    text-shadow: 1px 1px black;
+    animation-iteration-count: infinite;
+    animation-duration: .5s;
+    animation-name: text-shadow;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;   
 }
   
 @keyframes text-shadow {
@@ -132,7 +142,28 @@ a.social:hover {
 
 
 
-@media screen and (max-width: 600px)  {
+@media screen and (min-width: 400px) and (max-width: 600px)  {
+    .title {
+        font-size: 3.3rem;
+        float: none;
+    }
+    #navigation {
+        display: inline-block;
+        width: auto;
+        margin: auto;
+        padding: .1rem;
+    }
+
+    .tab {
+        font-size:  calc(clamp(1.5rem,3vw,2.2rem));
+    }
+    a.social {
+        font-size: calc(clamp(3rem,4rem,4rem));
+    }
+    
+}
+
+@media screen and (max-width: 400px)  {
     .title {
         font-size: 3rem;
         float: none;
@@ -143,22 +174,31 @@ a.social:hover {
         margin: auto;
         padding: .1rem;
     }
+
+    a.social {
+        font-size: calc(clamp(3rem,4rem,4rem));
+    }
     
 }
 
 @media screen and (min-width: 600px)  {
     .title {
-        font-size:  calc(clamp(2rem,6.5vw,5.5rem));
+        font-size:  calc(clamp(2rem,6.5vw,4rem));
         float: left;
         align-items: center;
     }
 
     .tab {
+        font-size:  calc(clamp(2rem,3vw,4rem));
         float: left;
     }
     
     #navigation {
         margin: auto auto;
+    }
+
+    a.social {  
+        font-size: calc(clamp(2rem,3rem,5rem));
     }
 }
 
@@ -207,7 +247,7 @@ a.social:hover {
     border: 0;
     background-color: transparent;
     border-radius: .25rem;
-    font-size:  calc(clamp(1rem,3vw,3rem));
+
     display: inline-block;
 
 }
@@ -291,17 +331,22 @@ header {
 }
 
 .page.expanded {
-    transition: all 1s;
+    pointer-events: all;
+    transition: opacity .25s;
+   
     margin-top: 100%;
     opacity: 100%;
     display: inline-block;
     margin: auto;
+    
 }
 
 .page.collapsed {
-    transition: all 1s;
+    pointer-events: none;
+    transition: opacity .25s;
+    
     opacity: 0%;
-    display: none;
+    display: inline-block;
     margin: auto;
 }
 
