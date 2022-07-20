@@ -20,14 +20,14 @@ Media Query Breakpoints:
 }
 
 html, body {
+    background: var(--background);  
     overflow-x: hidden;
 }
 body {
     /*height: 80vh;*/
 }
 
-body {
-    background: var(--background);  
+body { 
     text-align: center;
     margin: 0;
     padding: 0;
