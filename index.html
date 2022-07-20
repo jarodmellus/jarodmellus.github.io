@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +27,7 @@
 
     <header>
       <div class="title-bar">
-        <button class="title" onclick="openTab('home')">jarod mellus</a></button>
+        <button class="title" onclick="openTab('home')">jarod mellus</button>
      
       <!---<h2 class="subtitle">software and game developer</h2>-->
     </div>
@@ -44,19 +45,25 @@
     <body>
      
       <div class="main">
-        <div id="home" class="page" style="display:inline-block">
-          
+        <div id="home" class="page expanded" >
+          <p>Hello</p>
         </div>
 
-        <div id="about" class="page" style="display:none"></div>
-        <div id="works"class="page" style="display:none"></div>
-          <p> HELOAS DFASD FASDF ASD FASD FASDFASD FASDF ASD FASD 
+        <div id="about" class="page collapsed " >
+        
+        </div>
+        <div id="works"class="page collapsed " >
+          <p>
+            HELOAS DFASD FASDF ASD FASD FASDFASD FASDF ASD FASD 
             FASDF ASDF AD FASDFASDFA SDFAS DFA DSF ASDF ASD F dsfa 
-            sajdfhasd jfkahsjdf asdf asdf </p>
+            sajdfhasd jfkahsjdf asdf asdf
+          </p>
+        
           <iframe src="https://www.youtube.com/embed/oDeMQCi5bx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <iframe src="https://www.youtube.com/embed/bquKxRjnjkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <!--<a href="https://hab79.itch.io/natures-grave">Link to download of game</a>--->
-        <div id="contact"class="page" style="display:none"></div>
+        </div>
+        <div id="contact" class="page collapsed" ></div>
     </div>
     <div class="footer"> 
       <!---Social Media--->
@@ -81,12 +88,6 @@
           <i class="fa-brands fa-youtube"></i>
         </a>
       </div>
-    </div>
-    <div class = "toggle">
-      <!---
-      <button id="ThreeToggle" class = "footerButton" type="button">3D<i class="fa-solid fa-cube"></i></button>
-      <button id="SoundToggle" class = "footerButton" type="button"><i class="fa-solid fa-volume-high"></i></button>
-      -->
     </div>
     </body>
 </div>
