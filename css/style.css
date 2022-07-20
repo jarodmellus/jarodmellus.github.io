@@ -36,7 +36,6 @@ body {
 .social-container {
     
     display:inline-block;
-    height: inherit;
   
 }
 
@@ -49,16 +48,15 @@ a.social {
     transition: color .25s;
     padding-top: 1px;
     padding: 0.25rem;
-    padding-bottom: 2rem;
     
-    color: #f2f2f2;
+    color: rgba(255, 255, 255, .75); /* #f2f2f2;*/
     text-align: center;
    
     text-decoration: none;
     height: auto;
     width: auto;
     margin: auto;
-    font-size: calc(clamp(1rem,3vw,5rem));
+    font-size: calc(clamp(2.25rem,4vw,4rem));
     
 
 }
@@ -88,19 +86,19 @@ a.social:hover {
 }
 
 
-#youtube {
+#youtube.social:hover  {
     color : var(--youtube);  
 }
 
-#itch {
+#itch.social:hover   {
     color : var(--itch);
 }
 
-#linkedin {
+#linkedin.social:hover   {
     color : var(--linkedin);
 }
 
-#twitter {
+#twitter.social:hover {
     color : var(--twitter);
 }
 
@@ -121,25 +119,26 @@ a.social:hover {
     font-weight: 500;
     background-color: transparent;
     border: 0;
-    padding: 0;
+    padding: inherit;
     display: inline-block;
-    margin: 0;
+    margin: inherit;
 }
 
 
 
-@media screen and (max-width: 640px)  {
+@media screen and (max-width: 400px)  {
     .title {
-        font-size: 3rem;
+        font-size: 2.6rem;
         float: none;
     }
     
 }
 
-@media screen and (min-width: 640px)  {
+@media screen and (min-width: 400px)  {
     .title {
         font-size:  6vw;
         float: left;
+        align-items: center;
     }
 
     .tab {
@@ -149,8 +148,8 @@ a.social:hover {
     #navigation {
         display:inline-block;
         width: auto;
-        margin: auto;
-        padding: 1rem;
+        margin: inherit;
+        padding: inherit;
     }
 }
 
@@ -176,11 +175,7 @@ a.social:hover {
     display:inline-block;
 }
 
-/*
-.title-bar {
-    height: 5%;
-}
-*/
+
 
 .title:hover {
     color : #515151;
@@ -195,14 +190,15 @@ a.social:hover {
     float: center;
     color: #f2f2f2;
     text-align: center;
-    padding: .15rem .5rem;
+    padding: .15rem .25rem;
+    margin: auto
     text-decoration: none;
     font-size: 28px;
     background-image: none;
     border: 0;
     background-color: transparent;
     border-radius: .25rem;
-    font-size:  calc(3vw);
+    font-size:  calc(clamp(1rem,3vw,3rem));
     display: inline-block;
 
 }
@@ -223,20 +219,25 @@ a.social:hover {
 
 }
 
-p {
+header {
+    padding: .5rem;
+}
+
+.page p {
+    color: whitesmoke;
     font-family: 'IM Fell Great Primer';
+    text-align: left;
 }
 
 .page {
-    color: var(--white);
-    font-family: 'IM Fell Great Primer';
-    text-align: left;
+    
     position: relative;
-    width: 90%;
+    width: 60%;
     /*height: 90%;*/
-    margin: auto;
-    top: 0;
-    left: 0;
+    /*margin-left: 25%;
+    margin-right: 25%;*/
+    /*top: 0;
+    left: 0;*/
     clip-path:fill-box;
     /*overflow-y: scroll;*/
     /*background-color: rgba(1,1,1,.5);*/
@@ -283,11 +284,13 @@ p {
 
 
 iframe {
-    width: 90%;
+    
     height: fit-content;
     margin: inherit;
     border-radius: .5rem;
     padding: .1rem;
+    aspect-ratio: 16 / 9;
+    max-width: 70%;
 }
 
 .html5-video-player {
@@ -307,7 +310,7 @@ iframe {
 
     border-radius: .5rem;
     position: relative;
-    width: 90%;
+    width: 95%;
     margin: auto;
     background-color: #54b3d6;
     background: var(--background-page);
@@ -316,7 +319,7 @@ iframe {
     border-width: 1rem;
     border-color: #f06d06;
     border: 1rem;
-    height: 70vh;
+    height: 80vh;
     overflow-y: scroll;
    
 }
@@ -327,8 +330,8 @@ iframe {
     text-decoration: none;
     position:fixed;
     left:0px;
-    bottom:0;
-    height:calc(1vh/1vw);
+    bottom:0px;
+    /*height:calc(1vh/1vw);*/
     width: 100%;
     color: whitesmoke;
   

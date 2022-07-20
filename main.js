@@ -11,7 +11,7 @@ function openTab(page) {
     y.classList.toggle('collapsed');
     y.classList.toggle('expanded');
 
-    document.getElementById(page + 'Tab').style.backgroundColor = "rgb(40, 40, 40)";
+    document.getElementById(page + 'Tab').style.backgroundColor = "rgba(40, 40, 40,.25)";
 
     var e = document.getElementById(page)
     //e.style.display = "inline";
