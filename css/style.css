@@ -160,6 +160,10 @@ header:hover {
     margin: auto;
 }
 
+section {
+    display: block;
+  }
+
 
 
 @media screen and (min-width: 400px) and (max-width: 600px)  {
@@ -189,8 +193,8 @@ header:hover {
 
     .page p {
         width: 95%;
-        padding: 0;
-        margin: 0;
+        padding: 0.25rem;
+        margin: 0.25rem;
     }
     
 }
@@ -327,7 +331,7 @@ header {
 .page {
     display: grid;
     position: relative;
-    width: 65%;
+    /*width: 65%;*/
     
     /*height: 90%;*/
     /*margin-left: 25%;
@@ -420,7 +424,8 @@ header {
     border-radius: 2.8rem;
     max-width: 75%;
     float: left;
-    padding: 1rem;
+    padding: .25rem;
+    margin: .1rem;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
 }

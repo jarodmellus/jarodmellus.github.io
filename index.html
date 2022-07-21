@@ -1,143 +1,145 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap" rel="stylesheet">
-    <script
-      src="https://kit.fontawesome.com/53e3a5eea4.js"
-      crossorigin="anonymous"
-    ></script>
 
-    <script type = "text/javascript" src="/main.js"></script>
-    
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Jarod Mellus</title>
-  </head>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/53e3a5eea4.js" crossorigin="anonymous"></script>
 
-    <header>
-      <div class="title-bar">
-        <button class="title" onclick="openTab('home')">jarod mellus</button>
-     
-      <!---<h2 class="subtitle">software and game developer</h2>-->
+  <script type="text/javascript" src="/main.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Jarod Mellus</title>
+</head>
+
+<header>
+  <div class="title-bar">
+    <button class="title" onclick="openTab('home')">jarod mellus</button>
+
+    <!---<h2 class="subtitle">software and game developer</h2>-->
+  </div>
+
+
+  <div id="navigation">
+    <button class="tab" id="homeTab" "w3-bar-item w3-button" onclick="openTab('home')"
+      style="background-color: rgb(40,40,40,.25)">home</button>
+    <button class="tab" id="aboutTab" "w3-bar-item w3-button" onclick="openTab('about')">about</button>
+    <button class="tab" id="worksTab" "w3-bar-item w3-button" onclick="openTab('works')">works</button>
+    <button class="tab" id="contactTab" "w3-bar-item w3-button" onclick="openTab('contact')">contact</button>
+  </div>
+
+</header>
+
+<body>
+
+  <div class="main">
+    <div id="home" class="page expanded">
+
+      <p>Hello</p>
     </div>
-      
 
-      <div id="navigation">
-        <button class="tab" id="homeTab" "w3-bar-item w3-button" onclick="openTab('home')" style="background-color: rgb(40,40,40,.25)">home</button>
-        <button class="tab" id="aboutTab"  "w3-bar-item w3-button"  onclick="openTab('about')">about</button>
-        <button class="tab" id="worksTab"  "w3-bar-item w3-button" onclick="openTab('works')">works</button>
-        <button class="tab" id="contactTab" "w3-bar-item w3-button"  onclick="openTab('contact')">contact</button>
-      </div>
+    <div id="about" class="page collapsed">
+      <section>
+        <h1>ABOUT</h1>
+        <img src="images/jarodmellus.jpg" style=" width: 45%;"></img>
+        <p>
+          &emsp;&emsp; Hi, I'm Jarod Mellus. I am a software, web, and game developer.</p>
+      </section>
+      <br>
+      <br>
+    <section>
+      <h2>EDUCATION</h2>
+      <p> &emsp;&emsp;
 
-    </header>
+        <img src="images/drexel_arms.png" style=" width: 15%; filter: invert(1);"></img>
+        I am a student at Drexel University, where I study Computer Science with a concentration
+        in game development and programming. I will earn my Bachelor of Science in Computer Science in August 2022.
+      </p>
+      <br>
+      <p>&emsp;&emsp;
+        For my senior project, I developed a 2D action adventure game with 5 other C.S. students and 7 art students from
+        Westphal College of Media Arts & Design at Drexel.
+        <img src="images/drexel_dragon.gif" style="width: 65%; ">
+      </p>
+    </section>
 
-    <body>
-    
-      <div class="main">
-        <div id="home" class="page expanded" >
-          
-          <p>Hello</p>
-        </div>
+  <section>
 
-        <div id="about" class="page collapsed">
-              <h1>ABOUT</h1>
-              <img src="images/jarodmellus.jpg" style=" width: 35%;"></img>
-              <p>
-                &emsp;&emsp; Hi, I'm Jarod Mellus. I am a software, web, and game developer.</p>
-              <h2>EDUCATION</h2>
-              <p> &emsp;&emsp;  
-               
-                <img src="images/drexel_arms.png" style=" width: 15%; filter: invert(1);"></img>
-                I am a student at Drexel University, where I study Computer Science with a concentration
-                in game development and programming. I will earn my Bachelor of Science in Computer Science in August 2022.
-              </p>
-              <br>
-              <p>&emsp;&emsp;   
-                For my senior project, I developed a 2D action adventure game with 5 other C.S. students and 7 art students from
-                Westphal College of Media Arts & Design at Drexel.
-                <img src="images/drexel_dragon.gif" style="width: 65%; ">
-              </p>
-              
-                <h2>WORK</h2>
-              <p>
-                <br> &emsp; 
-                I previously worked at the <b>G</b>ames and <b>L</b>earning in <b>I</b>nteractive <b>D</b>evelopment <b>E</b>nvironments (<b>GLIDE</b>) Lab at the Drexel School of Education
-                for Co-op. There I was a developer on a hybrid AR/VR mobile game to be used as a supplemental experience
-                to tours of the Philadelphia Museum of the Arts.
+      <h2>WORK</h2>
+      <p>
+        <br> &emsp;
+        I previously worked at the <b>G</b>ames and <b>L</b>earning in <b>I</b>nteractive <b>D</b>evelopment
+        <b>E</b>nvironments (<b>GLIDE</b>) Lab at the Drexel School of Education
+        for Co-op. There I was a developer on a hybrid AR/VR mobile game to be used as a supplemental experience
+        to tours of the Philadelphia Museum of the Arts.
 
-                <img src="images/drexel_night.jpg" style=" width: 50%;"></img>
+        <img src="images/drexel_night.jpg" style=" width: 50%;"></img>
 
-              </p>
-              <p> and I also made this website...</p>
-              <h2>SKILLS</h2>
-              
-                <h3>Programming Languages:</h3>
-                  <p>C#, C, Java, Javascript, Python</p>
-                <h3>Game Developement:</h3>
-                <img src="images/unity_logo.png" style="width: 50%;">
-                <img src="images/blender_logo.png" style="width: 50%;">
-                <img src="images/adobe_suite_logo.jpg" style="width: 50%;">
-                  <p>Unity, Blender, Adobe Suite</p>
-                <h3>Web Developement:</h3>
-                  <p>React, html, css, Node.js</p>
-              
-      
-        </div>
-        <div id="works"class="page collapsed ">
-          <iframe src="https://www.youtube.com/embed/oDeMQCi5bx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe src="https://www.youtube.com/embed/bquKxRjnjkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <!--<a href="https://hab79.itch.io/natures-grave">Link to download of game</a>--->
-        </div>
-        <div id="contact" class="page collapsed">
-          <form action="./mailProccesor.php"> method="post" enctype="text/plain">
-            Name:<br>
-            <input type="text" name="name"><br>
-            E-mail:<br>
-            <input type="text" name="mail"><br>
-            Comment:<br>
-            <input type="text" name="comment" size="50"><br><br>
-            <input type="submit" value="Send">
-            <input type="reset" value="Reset">
-            </form>
-            
+      </p>
+      <p> and I also made this website...</p>
+    </section>
+    <section>
+      <h2>SKILLS</h2>
 
-        </div>
+      <h3>Programming Languages:</h3>
+      <p>C#, C, Java, Javascript, Python</p>
+      <h3>Game Developement:</h3>
+      <img src="images/unity_logo.png" style="width: 50%;">
+      <img src="images/blender_logo.png" style="width: 50%;">
+      <img src="images/adobe_suite_logo.jpg" style="width: 50%;">
+      <p>Unity, Blender, Adobe Suite</p>
+      <h3>Web Developement:</h3>
+      <p>React, html, css, Node.js</p>
+    </section>
+
     </div>
-    <div class="footer"> 
-      <!---Social Media--->
-      <div class="social-container">
-        <a
-          class="social"
-          href="https://www.linkedin.com/in/jarod-mellus-120053167/"
-          id = "linkedin"
-          >
-          <i class="fa-brands fa-linkedin" id = "linkedin"></i>
-        </a>
-        <a class="social" href="https://jarodmellus.itch.io/" id = "itch">
-          <i class="fa-brands fa-itch-io"></i>
-        </a>
-        <a class="social" href="https://twitter.com/JarodMellus/" id = "twitter">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a
-          class="social"
-          href="https://www.youtube.com/user/JarodsClaymation/featured" id = "youtube"
-        >
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-      </div>
+    <div id="works" class="page collapsed ">
+      <iframe src="https://www.youtube.com/embed/oDeMQCi5bx0" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/bquKxRjnjkc" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <!--<a href="https://hab79.itch.io/natures-grave">Link to download of game</a>--->
     </div>
-    </body>
+    <div id="contact" class="page collapsed">
+      <form action="./mailProccesor.php"> method="post" enctype="text/plain">
+        Name:<br>
+        <input type="text" name="name"><br>
+        E-mail:<br>
+        <input type="text" name="mail"><br>
+        Comment:<br>
+        <input type="text" name="comment" size="50"><br><br>
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+      </form>
+
+
+    </div>
+  </div>
+  <div class="footer">
+    <!---Social Media--->
+    <div class="social-container">
+      <a class="social" href="https://www.linkedin.com/in/jarod-mellus-120053167/" id="linkedin">
+        <i class="fa-brands fa-linkedin" id="linkedin"></i>
+      </a>
+      <a class="social" href="https://jarodmellus.itch.io/" id="itch">
+        <i class="fa-brands fa-itch-io"></i>
+      </a>
+      <a class="social" href="https://twitter.com/JarodMellus/" id="twitter">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a class="social" href="https://www.youtube.com/user/JarodsClaymation/featured" id="youtube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+  </div>
+</body>
 </div>
+
 </html>
