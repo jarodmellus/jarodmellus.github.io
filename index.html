@@ -3,7 +3,7 @@
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet" />
@@ -46,33 +46,47 @@
     <div id="about" class="page collapsed">
       <section>
         <h1>ABOUT</h1>
-        
-        <p>
-          <img src="images/jarodmellus.jpg" style=" width: 25%;"></img>
+        <img src="images/jarodmellus.jpg" style=" width: 25%;" alt="photo of Jarod Mellus">
+        <p style="font-size: 2rem">
           &emsp;&emsp; Hi, I'm Jarod Mellus. I am a software, web, and game developer.
         </p>
+      
       </section>
       <br>
       <br>
       <br>
-    <section style="background-image: url(images/drexel_night.jpg); background-size: cover;
-     background-position:25% 75%; min-height: 350px; padding: 1rem; border-radius: 1rem;  -webkit-filter: drop-shadow(5px 5px 5px #222);
+    <section style="background-image: url(images/drexel_night.jpg); background-size: cover; display: inline-block;
+     background-position:25% 75%; min-height: 350px; margin: auto; width: auto; padding: 1rem; border-radius: 1rem;  -webkit-filter: drop-shadow(5px 5px 5px #222);
      filter: drop-shadow(5px 5px 5px #222);">
       <h2>EDUCATION</h2>
-      <img src="images/drexel_arms.png" style=" width: 15%; filter: invert(1); -webkit-backdrop-filter: invert(1) blur(2px); backdrop-filter: invert(1) blur(2px); border-radius: 90px;"></img>
-      <p> &emsp;&emsp;
+      <img src="images/drexel_arms.png" alt="drexel arms" style=" width: 15%; filter: invert(1)  drop-shadow(1px 1px .25rem black) drop-shadow(1px 1px .25rem black);">
+      <p id="over-image">&emsp;&emsp;
 
         
-        I am a student at Drexel University, where I study Computer Science with a concentration
-        in game development and programming. I will earn my Bachelor of Science in Computer Science in August 2022.
+        I am a student at the Drexel University College of Computing & Informatics. In August 2022, I will earn my 
+        Bachelor of Science in Computer Science with a concentration in game development and programming.
+
+
       </p>
+
+      <p id="over-image">
+        My studies focused on object-oriented software design, software validation & verification, and test driven development.
+
+        algorithmic analysis
+
+        On the game development side, I studied computer graphics.
+
+        I also l
+      </p>
+      <img src="images/drexel_dragon.gif" alt="timelapse gif of drexel dragon statue" style="width: 45%; max-width: 50%; float: left; z-index:2; margin: .25rem;">
       <br>
-      <p>&emsp;&emsp;
+      <p id="over-image">&emsp;&emsp;
         For my senior project, I developed a 2D action adventure game with 5 other C.S. students and 7 art students from
-        Westphal College of Media Arts & Design at Drexel.
-        <img src="images/drexel_dragon.gif" style="width: 65%; ">
-        <img src="images/drexel_night.jpg" style=" width: 50%;"></img>
+        Westphal College of Media Arts & Design at Drexel. I was responsible for save data, multi-scene workflow, and 
+        game-state management. Our team operated under a scrum workflow.
+        
       </p>
+      <img src="images/drexel_logo.png" style="filter:  drop-shadow(0px 0px .25rem gold) drop-shadow(0px 0px .25rem gold); ">
     </section>
 
   <section>
@@ -85,30 +99,31 @@
         for Co-op. There I was a developer on a hybrid AR/VR mobile game to be used as a supplemental experience
         to tours of the Philadelphia Museum of the Arts.
 
-        
 
+  
       </p>
+      <img src="images/glide_lab_logo.jpg" alt="games and learning in interactive development environment logo" style="width: auto; margin: auto; float: none;">
       <p> and I also made this website...</p>
     </section>
     <section>
       <h2>SKILLS</h2>
 
       <h3>Programming Languages:</h3>
-      <figure><img src="images/c_sharp_logo.png" style="width: 5%;" id="logo"></figure>
+      <figure id="language-logo" style="width: 10%;"><img src="images/c_sharp_logo.png" id="language-logo" alt="c sharp logo"><figcaption>C#</figcaption></figure>
       
-      <figure><img src="images/c_logo.png" style="width: 5%; "id="logo"></figure>
-      <figure><img src="images/java_logo.png" style="width: 5%; border-radius: 1rem" id="logo"></figure>
-      <figure><img src="images/javascript_logo.png" style="width: 5%; border-radius: 1rem;" id="logo" ></figure>
-      <figure><img src="images/python_logo.png" style="width: 5%; " id="logo"></figure>
-      <p>C#, C, Java, Javascript, Python</p>
+      <figure id="language-logo" style="width: 10%;"><img src="images/c_logo.png" id="language-logo" alt="c logo"><figcaption>C</figcaption></figure>
+      <figure id="language-logo" style="width: 10%;"><img src="images/java_logo.png" style="border-radius: 1rem" id="language-logo" alt="java logo"><figcaption>Java</figcaption></figure>
+      <figure id="language-logo" style="width: 10%;"><img src="images/javascript_logo.png" style="border-radius: 1rem;" id="language-logo" alt="javascript logo"><figcaption>Javascript</figcaption></figure>
+      <figure id="language-logo" style="width: 10%;"><img src="images/python_logo.png"  id="language-logo" alt="python logo"><figcaption>Python</figcaption></figure>
       <h3>Game Developement:</h3>
-      <img src="images/unity_logo.png" style="width: 35%; " id="logo">
-      <img src="images/blender_logo.png" style="width: 35%; " id="logo">
-      <img src="images/adobe_suite_logo.jpg" style="width: 35%; " id="logo">
+      <figure  id="game-logo" style="width: 20%;"><img src="images/unity_logo.png" id="game-logo" alt="unity logo"><figcaption>Unity</figcaption></figure>
+      <figure id="game-logo"  style="width: 20%;"><img src="images/blender_logo.png"  id="game-logo" alt="blender logo"><figcaption>Blender</figcaption></figure>
+      <figure id="game-logo" style="width: 20%;"><img src="images/adobe_suite_logo.jpg" style="border-radius: 0;"  id="game-logo" alt="adobe logo"><figcaption>Adobe Suite</figcaption></figure>
       
-      <img src="images/react_logo.png" style="width: 35%; border-radius: none">
-      <p>Unity, Blender, Adobe Suite</p>
+      
       <h3>Web Developement:</h3>
+      
+      <img src="images/react_logo.png" style="width: 35%; border-radius: 0px" alt="react logo">
       <p>React, html, css, Node.js</p>
     </section>
 
@@ -123,7 +138,7 @@
       <!--<a href="https://hab79.itch.io/natures-grave">Link to download of game</a>--->
     </div>
     <div id="contact" class="page collapsed">
-      <form action="./mailProccesor.php"> method="post" enctype="text/plain">
+     <!-- <form action="./mailProccesor.php"> method="post" enctype="text/plain">
         Name:<br>
         <input type="text" name="name"><br>
         E-mail:<br>
@@ -133,6 +148,11 @@
         <input type="submit" value="Send">
         <input type="reset" value="Reset">
       </form>
+    -->
+    <h1><i class="fa-solid fa-phone"></i> Phone: 267.223.9622</h1>
+    <h1><i class="fa-solid fa-envelope"></i> Email: jarodmellus@outlook.com</h1>
+    <h1></h1>
+
 
 
     </div>

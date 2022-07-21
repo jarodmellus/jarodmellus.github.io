@@ -11,6 +11,11 @@ function openTab(page) {
     y.classList.toggle('collapsed');
     y.classList.toggle('expanded');
 
+    if(y.isEqualNode(document.getElementsByID("contact"))) { //expand social media
+      //toggle expanded
+      //toggle collapsed
+    }
+
     document.getElementById(page + 'Tab').style.backgroundColor = "rgba(40, 40, 40,.25)";
 
     var e = document.getElementById(page)
@@ -19,7 +24,19 @@ function openTab(page) {
     e.classList.toggle('expanded')
     selected=page;
 
-    window.scrollTo(0, 0);
+    if(e.isEqualNode(document.getElementsByID("contact"))) { //expand social media
+      //toggle expanded
+      //toggle collapsed
+    }
+
+    //e.scrollTop = 0;
+
+    var m = document.getElementsByClassName("main");
+    m[0].scrollTop = 0;
+
+    //document.body.scrollTop = document.documentElement.scrollTop = 0;
+    //$(".main").animate({ scrollTop: 0 }, "fast");
+    
 }
 
 $(function(){
