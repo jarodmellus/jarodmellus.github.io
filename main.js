@@ -18,6 +18,8 @@ function openTab(page) {
     e.classList.toggle('collapsed')
     e.classList.toggle('expanded')
     selected=page;
+
+    window.scrollTo(0, 0);
 }
 
 $(function(){

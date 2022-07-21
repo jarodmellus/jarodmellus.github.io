@@ -326,11 +326,18 @@ header {
     font-family: 'IM Fell Great Primer';
     text-align: left;
     text-align: justify;
+    filter:  drop-shadow(0 0 25px black);
+    -webkit-filter:  drop-shadow(0 0 25px black);
+    -webkit-backdrop-filter: blur(2px); 
+    backdrop-filter: blur(2px) ; 
+    border-radius: 15px; 
+    padding: .5rem;
 }
 
 .page {
     display: grid;
     position: relative;
+    max-width: 1000px;
     /*width: 65%;*/
     
     /*height: 90%;*/
@@ -422,12 +429,16 @@ header {
     position: relative;
     display: inline-block;
     border-radius: 2.8rem;
-    max-width: 75%;
-    float: left;
+    
     padding: .25rem;
     margin: .1rem;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
+    max-width:100%;
+}
+
+#logo {
+    border-radius: 0;
 }
 
 #all {
@@ -437,14 +448,16 @@ header {
 
 
 iframe {
-    
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
     height: fit-content;
     margin: 1rem;
     border-radius: 1rem;
     padding: .25rem;
     aspect-ratio: 16 / 9;
-    max-width: 100%;
     width: 75%;
+    max-width: 100%;
+    
     display: inline-block;
 }
 
