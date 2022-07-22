@@ -1,0 +1,30 @@
+* {
+    scrollbar-width: 0;
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+  }
+
+*::-webkit-scrollbar {
+    width: 0;
+    scrollbar-width: thin;
+    border-radius: 0;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 0;
+    
+}
+
+
+   
+*::-webkit-scrollbar-thumb {
+    scrollbar-color: red red;
+    border-radius: 5px; 
+    /*scrollbar-color: rgb(63,94,251);
+    scrollbar-color: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%) radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    */
+    /*outline: 1px solid rgba(100,100,100,.5);*/
+
+    /*scrollbar-color: rgba(63,94,251,1);*/
+}
+
