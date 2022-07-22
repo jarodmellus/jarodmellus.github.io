@@ -25,6 +25,12 @@ function openTab(page) {
       }
 
     }
+
+    if(y.isEqualNode(document.getElementById("works"))) {
+      $('.iframe').each(()=>stopVideo($(this)));
+    }
+
+  
     
 
     document.getElementById(page + 'Tab').style.backgroundColor = "rgba(40, 40, 40,.25)";
@@ -58,6 +64,12 @@ function openTab(page) {
     //$(".main").animate({ scrollTop: 0 }, "fast");
     
 }
+
+
+var stopVideo = function ( element ) {
+  element.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+};
+
 
 $(function(){
   var $jittery = $('.jittery'),
