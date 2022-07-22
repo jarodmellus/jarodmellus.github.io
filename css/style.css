@@ -123,24 +123,18 @@ body {
 
 .social-container.collapsed {
     position: fixed;
-    margin: auto;
+    margin: 0;
     padding:0;
-    transition: all .75s ; 
+    transition: all .75s  ; 
+    
 }
 
 .social-container.expanded {
     position: absolute;
     margin: auto;
     bottom: 15vh;
-    min-width: 4ch;
-    transition: all .75s;
+    transition: all .75s ;
 }
-
-
-
-
-
-
 
 
 a.social:hover {
@@ -231,7 +225,7 @@ section {
 
 
 
-@media screen and (max-aspect-ratio: 3/1) {
+@media only screen and (max-aspect-ratio: 1/1), (max-width: 600px)  {
     .title {
         font-size: 3.3rem;
         float: none;
@@ -261,30 +255,42 @@ section {
         /*padding: 0.25rem;
         margin: 0.25rem;*/
     }
+
+    #twitter.social.expanded {
+        top: 80%;
+        left: 10%;
+    }
+    
+    #youtube.social.expanded  {
+        top:80%;
+        right: 10%;
+    }
+    
+    #itch.social.expanded {
+        bottom: 10%;
+        right: 10%;
+    }
+    
+    #linkedin.social.expanded {
+        bottom: 10%;
+        left: 10%;
+    
+    }
+
+    .social-container {
+        width: 100%;
+        height: 40%;
+        display: relative;
+    }
+
+    .social.expanded {
+        position: absolute;
+        font-size: calc(clamp(6rem,12vw,6rem));
+    }
     
 }
 
-/*
-
-@media screen and (max-width: 400px)  {
-    .title {
-        font-size: 3rem;
-        float: none;
-    }
-    #navigation {
-        display: inline-block;
-        width: auto;
-        margin: auto;
-        padding: .1rem;
-    }
-
-    a.social {
-        font-size: calc(clamp(3rem,4rem,3rem));
-    } 
-}
-*/
-
-@media screen and (min-width: 600px)  {
+@media only screen and (min-width: 600px)  {
     .title {
         font-size:  calc(clamp(2rem,6.5vw,4rem));
         float: left;
@@ -303,11 +309,18 @@ section {
     a.social {  
         font-size: calc(clamp(2rem,3rem,5rem));
     }
+
+    .social.expanded {
+        
+        font-size: calc(clamp(4rem,16vw,8rem));
+    }
 }
 
 .social {
     text-align: center;
 }
+
+
 
 .social.collapsed {
     text-decoration: none;
@@ -320,9 +333,12 @@ section {
     margin: auto;
     transition: all 1s ease;
     
+    position: relative;
+    
 }
 
 .social.expanded {
+    
     text-decoration: none;
     bottom: 0;
     padding: .1rem;
@@ -330,7 +346,6 @@ section {
     -webkit-text-stroke: 2px #fff;
     top: 0;
     transition: all 1s ease;
-    font-size: calc(clamp(4rem,16vw,8rem));
     -webkit-filter: drop-shadow(1px 1px 1px #222);
     filter: drop-shadow(1px 1px 1px #222);
 }

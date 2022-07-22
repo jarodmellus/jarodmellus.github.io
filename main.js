@@ -12,7 +12,7 @@ function openTab(page) {
     y.classList.toggle('expanded');
 
     
-    if(y.isEqualNode(document.getElementById("contact"))) { //expand social media
+    if(y.isEqualNode(document.getElementById("contact"))) { //collapse social media
     
       //toggle expanded
       //toggle collapsed      
@@ -23,7 +23,7 @@ function openTab(page) {
         x[i].classList.toggle("collapsed");
         x[i].classList.toggle("expanded");
       }
-
+      //$("#social-container").detach().appendTo('body');
     }
 
     if(y.isEqualNode(document.getElementById("works"))) {
@@ -52,6 +52,7 @@ function openTab(page) {
         x[i].classList.toggle("collapsed");
         x[i].classList.toggle("expanded");
       }
+      //$("#social-container").detach().appendTo(".main");
     }
     
 
