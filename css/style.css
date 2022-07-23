@@ -225,6 +225,7 @@ section {
 
 
 
+
 @media only screen and (max-aspect-ratio: 1/1), (max-width: 600px)  {
     .title {
         font-size: 3.3rem;
@@ -257,30 +258,33 @@ section {
     }
 
     #twitter.social.expanded {
-        top: 80%;
-        left: 10%;
+        top: 70%;
+        left: 17%;
     }
     
     #youtube.social.expanded  {
-        top:80%;
-        right: 10%;
+        top: 70%;
+        right: 17%;
     }
     
     #itch.social.expanded {
-        bottom: 10%;
-        right: 10%;
+        top: 30%;
+        right: 17%;
     }
     
     #linkedin.social.expanded {
-        bottom: 10%;
-        left: 10%;
+        top: 30%;
+        left: 17%;
     
     }
 
     .social-container {
         width: 100%;
+        display: fixed;
+    }
+
+    .social-container.expanded {
         height: 40%;
-        display: relative;
     }
 
     .social.expanded {
@@ -288,6 +292,16 @@ section {
         font-size: calc(clamp(6rem,12vw,6rem));
     }
     
+}
+/* for landscape */
+@media only screen and (min-aspect-ratio: 2/1) {
+    .social-container {
+        bottom: 0px;
+    }
+    .social.collapsed {
+        
+        font-size: calc(clamp(6rem,12vw,6rem));
+    }
 }
 
 @media only screen and (min-width: 600px)  {
@@ -477,7 +491,7 @@ header {
     opacity: 1;
     position: relative;
     display: inline-block;
-    height: 100%;
+    height: fit-content;
     scroll-behavior: smooth;
 
     
