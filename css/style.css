@@ -13,7 +13,8 @@ Media Query Breakpoints:
     --white: #f2f2f2;
     --background-page: linear-gradient(to right,rgba(255,255,255,0), rgba(0,0,0,.35),rgba(255,255,255,0));
     /*--background-page: radial-gradient(circle, rgba(63,94,251,.5) 0%, rgba(252,70,107,.5) 100%);*/
-    --background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    --background-day: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    --background-night: linear-gradient(90deg, rgb(14, 0, 36) 0%, rgb(0, 2, 46) 50%, rgb(0, 10, 56) 100%);
     --youtube: darkred;
     --linkedin: #0077B5;
     --itch: brown;
@@ -88,7 +89,11 @@ h1 {
 }
 
 html, body {
-    background: var(--background) repeat;  
+    
+    
+      
+    background: var(--background-day) space repeat;  
+    background: var(--background-night) space repeat; 
     
     background-size: 150% 150%;
 
@@ -97,9 +102,14 @@ html, body {
     
     margin: 0px;
     padding: 0px;
+    bottom: 0px;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: visible;
+    overscroll-behavior-y: none;
     height: 100%;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    /*overflow: auto!important;
+max-height: 100% !important;*/
     /*scroll-behavior: smooth;*/
     
 }
@@ -111,7 +121,6 @@ body {
 body { 
     text-align: center;
     margin: 0;
-    padding: 0;
 }
 
 .social-container {
@@ -293,15 +302,33 @@ section {
     }
     
 }
+
+
 /* for landscape */
-@media only screen and (min-aspect-ratio: 2/1) {
-    .social-container {
-        bottom: 0px;
+@media only screen and (min-aspect-ratio: 2/1) and (orientation: landscape){
+    html {
+        width: 100%;
+    }
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .social-container.collapsed {
+        height: auto;
+        margin: auto;
+        width: 10%;
+        right: -15%;
+        position: absolute;
     }
     .social.collapsed {
-        
-        font-size: calc(clamp(6rem,12vw,6rem));
+        display: block;
+        font-size: calc(clamp(3rem,5vw,6rem));
     }
+
+    #contact {
+
+    }
+
 }
 
 @media only screen and (min-width: 600px)  {
@@ -321,7 +348,7 @@ section {
     }
 
     a.social {  
-        font-size: calc(clamp(2rem,3rem,5rem));
+        font-size: calc(clamp(2rem,3rem,4.5rem));
     }
 
     .social.expanded {
@@ -448,13 +475,13 @@ header {
 .page p {
     margin: auto;
     width: auto;
-    padding: 0;
+    padding: 1rem;
     min-width: 200px;
     max-width: 1200px;
     color: whitesmoke;
     font-family: 'IM Fell Great Primer';
     text-align: left;
-    font-size: calc(clamp(.35rem,3vw,1.15rem));
+    font-size: calc(clamp(1rem,3vw,1.15rem));
     border-radius: 2px; 
 }
 
@@ -520,7 +547,7 @@ iframe {
     border-radius:  2vw;
     padding: .25rem;
     aspect-ratio: 16 / 9;
-    width: 75%;
+    width: 90%;
     max-width: 100%;
     
     display: inline-block;
@@ -543,7 +570,7 @@ iframe {
 
     border-radius:  2vw;
     position: relative;
-    width: 100%;
+    width: inherit;
     padding: 0;
     margin: auto;
     background-color: #54b3d6;
