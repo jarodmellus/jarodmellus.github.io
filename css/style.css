@@ -93,7 +93,7 @@ html, body {
     
       
     background: var(--background-day) space repeat;  
-    background: var(--background-night) space repeat; 
+    /*background: var(--background-night) space repeat;*/
     
     background-size: 150% 150%;
 
