@@ -5,6 +5,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="viewport" content=",initial-scale=1,viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name ="theme-color" content="#000000">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet" />
@@ -28,10 +33,10 @@
 
 
   <div id="navigation">
-    <button class="tab" id="homeTab" "w3-bar-item w3-button" onclick="openTab('home')"
-      style="background-color: rgb(40,40,40,.25)">home</button>
-    <button class="tab" id="aboutTab" "w3-bar-item w3-button" onclick="openTab('about')">about</button>
-    <button class="tab" id="worksTab" "w3-bar-item w3-button" onclick="openTab('works')">works</button>
+    <!--<button class="tab" id="homeTab" "w3-bar-item w3-button" onclick="openTab('home')"
+      style="background-color: rgb(40,40,40,.25)">home</button>-->
+    <button class="tab" id="homeTab" "w3-bar-item w3-button" onclick="openTab('home')">home</button>
+    <!--<button class="tab" id="worksTab" "w3-bar-item w3-button" onclick="openTab('works')">works</button>-->
     <button class="tab" id="contactTab" "w3-bar-item w3-button" onclick="openTab('contact')">contact</button>
   </div>
 
@@ -40,53 +45,61 @@
 <body>
 
   <div class="main">
-    <div id="home" class="page expanded">
-      <h1>HOME</h1>
-      <p>Hello</p>
-    </div>
+    <div class="overlay"></div>
+    <!--<div id="home" class="page expanded">
 
-    <div id="about" class="page collapsed">
-      <h1>ABOUT</h1>
+    </div>--->
+
+    <div id="home" class="page expanded">
+      <!---<h1>ABOUT</h1>--->
       <section>
-        <img src="images/jarodmellus.jpg" style=" width: 25%;" alt="photo of Jarod Mellus">
+        <!---<img src="images/jarodmellus.jpg" style=" width: 25%;" alt="photo of Jarod Mellus">--->
         <h2 style="font-size: 2rem; text-align: center;">
         </b>Hi, I'm <strong>Jarod Mellus.</strong></h2>
+        <img id = "img_jarod" src="images/jarodmellus.gif"  alt ="GIF of Jarod Mellus">
+       
         <p style="font-size: 2rem; text-align: center;">I am a software, web, and game developer.</p> 
-        
-      
       </section>
       <br>
       <br>
       <br>
-    <section style="background-image: url(images/drexel_night.jpg); background-size: cover; display: inline-block;
+    <section class="over-image" style="background-image: url(images/drexel_night.jpg); background-size: cover; display: inline-block;
      background-position:25% 75%; min-height: 350px; margin: auto; width: auto; padding: 1rem; border-radius: 1rem;  -webkit-filter: drop-shadow(5px 5px 5px #222);
      filter: drop-shadow(5px 5px 5px #222);">
       <h2>EDUCATION</h2>
       <img src="images/drexel_arms.png" alt="drexel arms" style=" width: calc(clamp(7rem,12vw,20rem)); filter: invert(1)  drop-shadow(1px 1px .25rem black) drop-shadow(1px 1px .25rem black);">
-      <p id="over-image">&emsp;&emsp;
+      <p class="over-image">&emsp;&emsp;
 
         
-        I am a student at the Drexel University College of Computing & Informatics. In August 2022, I will earn my 
-        Bachelor of Science in Computer Science with a concentration in game development and programming.
+        I graduated from Drexel University's College of Computing & Informatics in August of 2022, earning my
+        Bachelor of Science in <b>Computer Science</b> with a concentration in <b>Game Development and Programming</b> and <b>Human Computer Interaction</b>.
 
 
       </p>
+      <p class="over-image">
+        My Computer Science studies focused on topics including :
+        <ul class="over-image">
+          <li>Object-Oriented Software Design</li> 
+          <li>Software Validation & Verification</li>
+          <li>Test Driven Development</li>
+          <li>Web Development</li>
+          <li>Graphical User Interfaces</li>
+          <li>Network Programming</li>
+          <li>Algorithms & Data Structures</li>
+          <li>Operating Systems</li>
+        </ul>
 
-      <p id="over-image">
-        My studies focused on object-oriented software design, software validation & verification, and test driven development.
-
-        algorithmic analysis
-
-        On the game development side, I studied computer graphics.
-
-        I also l
       </p>
       <img src="images/drexel_dragon.gif" alt="timelapse gif of drexel dragon statue" style="width: 45%; max-width: 50%; float: left; z-index:2; margin: .25rem;">
       <br>
-      <p id="over-image">&emsp;&emsp;
-        For my senior project, I developed a 2D action adventure game with 5 other C.S. students and 7 art students from
-        Westphal College of Media Arts & Design at Drexel. I was responsible for save data, multi-scene workflow, and 
-        game-state management. Our team operated under a scrum workflow.
+      <p class="over-image">&emsp;&emsp;
+        For my senior project, I developed a 2D action adventure game with 5 other Computer Science students and 7 art students from
+        the Westphal College of Media Arts & Design at Drexel. I was responsible for save data, multi-scene workflow, 
+        game-state management, and audio. Our team operated under an agile/scrum workflow, keeping weekly standup meetings where we would update
+        our task board.
+        <iframe src="https://www.youtube.com/embed/oDeMQCi5bx0" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
         
       </p>
       <img src="images/drexel_logo.png" style="filter:  drop-shadow(0px 0px .25rem gold) drop-shadow(0px 0px .25rem gold); ">
@@ -95,56 +108,60 @@
   <section>
 
       <h2>EXPERIENCE</h2>
+      <a href="https://drexel.edu/soe/research/labs/glide-lab/"><img class="zoom" src="images/glide_lab_logo.jpg" alt="games and learning in interactive development environment logo" style="width: auto; margin: auto; float: none;"></a>
       <p>
         <br> &emsp;
         I previously worked at the <b>G</b>ames and <b>L</b>earning in <b>I</b>nteractive <b>D</b>evelopment
-        <b>E</b>nvironments (<b>GLIDE</b>) Lab at the Drexel School of Education
-        for Co-op. There I was a developer on a hybrid AR/VR mobile game to be used as a supplemental experience
+        <b>E</b>nvironments (<b>GLIDE</b>) Lab at the Drexel School of Education, a research lab focused on game-based learning. There I was a developer on <i><b>Pasithea</b></i>, a hybrid AR/VR mobile game to be used as a supplemental experience
         to tours of the Philadelphia Museum of the Arts.
 
-
+        <iframe src="https://www.youtube.com/embed/bquKxRjnjkc" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen><label>Here is a trailer created by the first developers of the project.</label></iframe>
   
       </p>
-      <img src="images/glide_lab_logo.jpg" alt="games and learning in interactive development environment logo" style="width: auto; margin: auto; float: none;">
-      <p> and I also made this website...</p>
     </section>
     <section>
       <h2>SKILLS</h2>
 
-      <h3>Programming Languages:</h3>
-      <figure id="language-logo" style="width: 10%;"><img src="images/c_sharp_logo.png" id="language-logo" alt="c sharp logo"><figcaption>C#</figcaption></figure>
+      <h3>Programming Languages</h3>
       
-      <figure id="language-logo" style="width: 10%;"><img src="images/c_logo.png" id="language-logo" alt="c logo"><figcaption>C</figcaption></figure>
-      <figure id="language-logo" style="width: 10%;"><img src="images/java_logo.png" style="border-radius: 1rem" id="language-logo" alt="java logo"><figcaption>Java</figcaption></figure>
-      <figure id="language-logo" style="width: 10%;"><img src="images/javascript_logo.png" style="border-radius: 1rem;" id="language-logo" alt="javascript logo"><figcaption>Javascript</figcaption></figure>
-      <figure id="language-logo" style="width: 10%;"><img src="images/python_logo.png"  id="language-logo" alt="python logo"><figcaption>Python</figcaption></figure>
-      <h3>Game Developement:</h3>
-      <figure  id="game-logo" style="width: 20%;"><img src="images/unity_logo.png" id="game-logo" alt="unity logo"><figcaption>Unity</figcaption></figure>
-      <figure id="game-logo"  style="width: 20%;"><img src="images/blender_logo.png"  id="game-logo" alt="blender logo"><figcaption>Blender</figcaption></figure>
-      <figure id="game-logo" style="width: 20%;"><img src="images/adobe_suite_logo.jpg" style="border-radius: 0;"  id="game-logo" alt="adobe logo"><figcaption>Adobe Suite</figcaption></figure>
+      <figure class="language-logo" style="width:10%;"><img src="images/cpp_logo.png" class="language-logo" alt="c plus plus logo"><figcaption>C++</figcaption></figure>
       
-      
-      <h3>Web Developement:</h3>
-      
-      <img src="images/react_logo.png" style="width: 35%; border-radius: 0px" alt="react logo">
-    
+      <figure class="language-logo" style="width: 10%;"><img src="images/c_logo.png" class="language-logo" alt="c logo"><figcaption>C</figcaption></figure>
+      <figure class="language-logo" style="width: 10%;"><img src="images/javascript_logo.png" class="language-logo" alt="javascript logo"><figcaption>Javascript</figcaption></figure>
+      <figure class="language-logo" style="width: 10%;"><img src="images/c_sharp_logo.png" class="language-logo" alt="c sharp logo"><figcaption>C#</figcaption></figure>
+      <figure class="language-logo" style="width: 10%;"><img src="images/python_logo.png"  class="language-logo" alt="python logo"><figcaption>Python</figcaption></figure>
+      <figure class="language-logo" style="width: 10%;"><img src="images/java_logo.png" class="language-logo" alt="java logo"><figcaption>Java</figcaption></figure>
+      <h3>Web Development</h3>
+      <img class="language-logo" src="images/react_logo.png" style="width: 25%; border-radius: 0px" alt="react logo">
+      <img class="language-logo" src="images/jquery_logo.png" style="width: 25%; border-radius: 0px" alt="jquery logo">
+      <h3>Game Development</h3>
+      <figure class="game-logo" style="width: 20%;"><img src="images/unity_logo.png" class="game-logo" alt="unity logo" style=" border-radius: 0px;"><figcaption>Unity</figcaption></figure>
+      <figure class="game-logo"  style="width: 20%; "><img src="images/blender_logo.png"  class="game-logo" alt="blender logo" style=" border-radius: 0px;"><figcaption>Blender</figcaption></figure>
+      <figure class="game-logo" style="width: 20%; "><img src="images/adobe_suite_logo.jpg" style="border-radius: 0;"  class="game-logo" alt="adobe logo"><figcaption>Adobe Suite</figcaption></figure>
+      <h3>Other Tools</h3>
+      <figure class="language-logo" style="width:20%;border-radius: 0px;"><img src="images/git_logo.svg" alt="git logo"><figcaption>Git</figcaption></figure>
+      <figure class="language-logo" style="width:10%;border-radius: 0px;"><img style="border-radius: 0px;"src="images/sql_logo.png" alt="sql logo"><figcaption>SQL</figcaption></figure>
+      <figure class="language-logo" style="width:20%;"><img src="images/bash_logo.png" alt="bash logo"><figcaption>BASH</figcaption></figure>
+      <h3>Operating Systems</h3>
+      <figure class="language-logo" style="width:20%;"><img src="images/linux_logo.png" class="language-logo" alt="linux logo"><figcaption>Linux</figcaption></figure>
+      <figure class="language-logo" style="width:20%;"><img src="images/android_logo.png" class="language-logo" alt="android logo"><figcaption>Android</figcaption></figure>
+
+
     </section>
 
     </div>
 
 
-    <div id="works" class="page collapsed ">
+    <!---<div id="works" class="page collapsed ">
       <h1>WORKS</h1>
-      <iframe src="https://www.youtube.com/embed/oDeMQCi5bx0" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/bquKxRjnjkc" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-      <!--<a href="https://hab79.itch.io/natures-grave">Link to download of game</a>--->
-    </div>
+
+      <a href="https://hab79.itch.io/natures-grave">Link to download of game</a>
+    </div> --->
+    
     <div id="contact" class="page collapsed">
-      <h1>CONTACT</h1>
+    <h1>CONTACT</h1> 
      <!-- <form action="./mailProccesor.php"> method="post" enctype="text/plain">
         Name:<br>
         <input type="text" name="name"><br>
@@ -156,29 +173,31 @@
         <input type="reset" value="Reset">
       </form>
     -->
-    <h1 style="font-size: calc(clamp(1.25rem,4vw,2.5rem)); text-align: center;"><i class="fa-solid fa-phone"></i>Phone: 267.223.9622</h1>
-    <h1 style="font-size: calc(clamp(1.25rem,4vw,2.5rem)); text-align: center;"><i class="fa-solid fa-envelope"></i> Email: jarodmellus@outlook.com</h1>
+    <div id ="contact-info">
+      <h2 ><i class="fa-solid fa-phone"></i> <b>Phone:</b><br> (267) 223-9622</h2>
+      <h2 ><i class="fa-solid fa-envelope"></i> <b>Email:</b><br> jarodmellus@outlook.com</h2>
     </div>
   </div>
-  <!--<div class="footer">-->
-  <div class="social-container collapsed" id="social-container">
-    <a class="social collapsed" href="https://www.linkedin.com/in/jarod-mellus-120053167/" id="linkedin">
-      <i class="fa-brands fa-linkedin" id="linkedin"></i>
-    </a>
-    
-    <a class="social collapsed" href="https://jarodmellus.itch.io/" id="itch">
-      <i class="fa-brands fa-itch-io"></i>
-    </a>
-    <a class="social collapsed" href="https://twitter.com/JarodMellus/" id="twitter">
-      <i class="fa-brands fa-twitter"></i>
-    </a>
-    <a class="social collapsed" href="https://www.youtube.com/user/JarodsClaymation/featured" id="youtube">
-      <i class="fa-brands fa-youtube"></i>
-    </a>
+  
   </div>
-  <i class="fa-solid fa-sun-haze"></i>
-  <i class="fa-solid fa-moon"></i>
-  <!--</div>-->
+  <div class="footer">
+    <div class="social-container collapsed" id="social-container">
+      <a class="social collapsed linkedin zoom" href="https://www.linkedin.com/in/jarod-mellus-120053167/">
+        <i class="fa-brands fa-linkedin" class="linkedin"></i>
+      </a>
+      
+      <a class="social collapsed zoom itch" href="https://jarodmellus.itch.io/">
+        <i class="fa-brands fa-itch-io"></i>
+      </a>
+      <a class="social collapsed zoom twitter" href="https://twitter.com/JarodMellus/">
+        <i class="fa-brands fa-twitter"></i>
+      </a> 
+      <a class="social collapsed zoom youtube" href="https://www.youtube.com/user/JarodsClaymation/featured">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+
+  </div>
 </body>
 
 </html>
