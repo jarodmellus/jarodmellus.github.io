@@ -34,7 +34,7 @@
 
   <div id="navigation">
     <!--<button class="tab" id="homeTab" "w3-bar-item w3-button" onclick="openTab('home')"
-      style="background-color: rgb(40,40,40,.25)">home</button>-->
+      >home</button>-->
     <button class="tab" id="homeTab" "w3-bar-item w3-button" onclick="openTab('home')">home</button>
     <!--<button class="tab" id="worksTab" "w3-bar-item w3-button" onclick="openTab('works')">works</button>-->
     <button class="tab" id="contactTab" "w3-bar-item w3-button" onclick="openTab('contact')">contact</button>
@@ -46,6 +46,7 @@
 
   <div class="main">
     <div class="overlay"></div>
+    <div id="text-underlay"></div>
     <!--<div id="home" class="page expanded">
 
     </div>--->
@@ -53,21 +54,19 @@
     <div id="home" class="page expanded">
       <!---<h1>ABOUT</h1>--->
       <section>
-        <!---<img src="images/jarodmellus.jpg" style=" width: 25%;" alt="photo of Jarod Mellus">--->
-        <h2 style="font-size: 2rem; text-align: center;">
+        <!---<img src="images/jarodmellus.jpg" alt="photo of Jarod Mellus">--->
+        <h2 >
         </b>Hi, I'm <strong>Jarod Mellus.</strong></h2>
         <img id = "img_jarod" src="images/jarodmellus.gif"  alt ="GIF of Jarod Mellus">
        
-        <p style="font-size: 2rem; text-align: center;">I am a software, web, and game developer.</p> 
+        <p>I am a software, web, and game developer.</p> 
       </section>
       <br>
       <br>
       <br>
-    <section class="over-image" style="background-image: url(images/drexel_night.jpg); background-size: cover; display: inline-block;
-     background-position:25% 75%; min-height: 350px; margin: auto; width: auto; padding: 1rem; border-radius: 1rem;  -webkit-filter: drop-shadow(5px 5px 5px #222);
-     filter: drop-shadow(5px 5px 5px #222);">
+    <section id="drexel-background" class="over-image" >
       <h2>EDUCATION</h2>
-      <img src="images/drexel_arms.png" alt="drexel arms" style=" width: calc(clamp(7rem,12vw,20rem)); filter: invert(1)  drop-shadow(1px 1px .25rem black) drop-shadow(1px 1px .25rem black);">
+      <img src="images/drexel_arms.png" id="drexel-arms" alt="drexel arms" >
       <p class="over-image">&emsp;&emsp;
 
         
@@ -77,20 +76,21 @@
 
       </p>
       <p class="over-image">
-        My Computer Science studies focused on topics including :
-        <ul class="over-image">
-          <li>Object-Oriented Software Design</li> 
-          <li>Software Validation & Verification</li>
-          <li>Test Driven Development</li>
-          <li>Web Development</li>
-          <li>Graphical User Interfaces</li>
-          <li>Network Programming</li>
-          <li>Algorithms & Data Structures</li>
-          <li>Operating Systems</li>
-        </ul>
+        My Computer Science studies focused on topics including:
+        <div id="courses-grid" class="over-image">
+          <div>Object-Oriented Programming</div> 
+          <div>Software Engineering</div>
+          <div>Software Validation & Verification</div>
+          <div>Test Driven Development</div>
+          <div>Web Development</div>
+          <div>Graphical User Interfaces</div>
+          <div>Network Programming</div>
+          <div>Algorithms & Data Structures</div>
+          <div>Operating Systems</div>
+        </div>
 
       </p>
-      <img src="images/drexel_dragon.gif" alt="timelapse gif of drexel dragon statue" style="width: 45%; max-width: 50%; float: left; z-index:2; margin: .25rem;">
+      <img src="images/drexel_dragon.gif" alt="timelapse gif of drexel dragon statue" >
       <br>
       <p class="over-image">&emsp;&emsp;
         For my senior project, I developed a 2D action adventure game with 5 other Computer Science students and 7 art students from
@@ -102,13 +102,13 @@
         allowfullscreen></iframe>
         
       </p>
-      <img src="images/drexel_logo.png" style="filter:  drop-shadow(0px 0px .25rem gold) drop-shadow(0px 0px .25rem gold); ">
+      <img src="images/drexel_logo.png" id="drexel-script-logo">
     </section>
 
   <section>
 
       <h2>EXPERIENCE</h2>
-      <a href="https://drexel.edu/soe/research/labs/glide-lab/"><img class="zoom" src="images/glide_lab_logo.jpg" alt="games and learning in interactive development environment logo" style="width: auto; margin: auto; float: none;"></a>
+      <a href="https://drexel.edu/soe/research/labs/glide-lab/"><img class="zoom" src="images/glide_lab_logo.jpg" alt="games and learning in interactive development environment logo" ></a>
       <p>
         <br> &emsp;
         I previously worked at the <b>G</b>ames and <b>L</b>earning in <b>I</b>nteractive <b>D</b>evelopment
@@ -126,27 +126,27 @@
 
       <h3>Programming Languages</h3>
       
-      <figure class="language-logo" style="width:10%;"><img src="images/cpp_logo.png" class="language-logo" alt="c plus plus logo"><figcaption>C++</figcaption></figure>
+      <figure class="language-logo" ><img src="images/cpp_logo.png" class="language-logo" alt="c plus plus logo"><figcaption>C++</figcaption></figure>
       
-      <figure class="language-logo" style="width: 10%;"><img src="images/c_logo.png" class="language-logo" alt="c logo"><figcaption>C</figcaption></figure>
-      <figure class="language-logo" style="width: 10%;"><img src="images/javascript_logo.png" class="language-logo" alt="javascript logo"><figcaption>Javascript</figcaption></figure>
-      <figure class="language-logo" style="width: 10%;"><img src="images/c_sharp_logo.png" class="language-logo" alt="c sharp logo"><figcaption>C#</figcaption></figure>
-      <figure class="language-logo" style="width: 10%;"><img src="images/python_logo.png"  class="language-logo" alt="python logo"><figcaption>Python</figcaption></figure>
-      <figure class="language-logo" style="width: 10%;"><img src="images/java_logo.png" class="language-logo" alt="java logo"><figcaption>Java</figcaption></figure>
+      <figure class="language-logo" ><img src="images/c_logo.png" class="language-logo" alt="c logo"><figcaption>C</figcaption></figure>
+      <figure class="language-logo" ><img src="images/javascript_logo.png" class="language-logo" alt="javascript logo"><figcaption>Javascript</figcaption></figure>
+      <figure class="language-logo" ><img src="images/c_sharp_logo.png" class="language-logo" alt="c sharp logo"><figcaption>C#</figcaption></figure>
+      <figure class="language-logo" ><img src="images/python_logo.png"  class="language-logo" alt="python logo"><figcaption>Python</figcaption></figure>
+      <figure class="language-logo" ><img src="images/java_logo.png" class="language-logo" alt="java logo"><figcaption>Java</figcaption></figure>
       <h3>Web Development</h3>
-      <img class="language-logo" src="images/react_logo.png" style="width: 25%; border-radius: 0px" alt="react logo">
-      <img class="language-logo" src="images/jquery_logo.png" style="width: 25%; border-radius: 0px" alt="jquery logo">
+      <figure class="language-logo" ><img class="language-logo" src="images/react_logo.png" alt="react logo"></figure>
+      <figure class="language-logo" ><img class="language-logo" src="images/jquery_logo.png" alt="jquery logo"></figure>
       <h3>Game Development</h3>
-      <figure class="game-logo" style="width: 20%;"><img src="images/unity_logo.png" class="game-logo" alt="unity logo" style=" border-radius: 0px;"><figcaption>Unity</figcaption></figure>
-      <figure class="game-logo"  style="width: 20%; "><img src="images/blender_logo.png"  class="game-logo" alt="blender logo" style=" border-radius: 0px;"><figcaption>Blender</figcaption></figure>
-      <figure class="game-logo" style="width: 20%; "><img src="images/adobe_suite_logo.jpg" style="border-radius: 0;"  class="game-logo" alt="adobe logo"><figcaption>Adobe Suite</figcaption></figure>
+      <figure class="game-logo" ><img src="images/unity_logo.png" class="game-logo" alt="unity logo" ><figcaption>Unity</figcaption></figure>
+      <figure class="game-logo"  ><img src="images/blender_logo.png"  class="game-logo" alt="blender logo" ><figcaption>Blender</figcaption></figure>
+      <figure class="game-logo" ><img src="images/adobe_suite_logo.jpg"  class="game-logo" alt="adobe logo"><figcaption>Adobe Suite</figcaption></figure>
       <h3>Other Tools</h3>
-      <figure class="language-logo" style="width:20%;border-radius: 0px;"><img src="images/git_logo.svg" alt="git logo"><figcaption>Git</figcaption></figure>
-      <figure class="language-logo" style="width:10%;border-radius: 0px;"><img style="border-radius: 0px;"src="images/sql_logo.png" alt="sql logo"><figcaption>SQL</figcaption></figure>
-      <figure class="language-logo" style="width:20%;"><img src="images/bash_logo.png" alt="bash logo"><figcaption>BASH</figcaption></figure>
+      <figure class="language-logo" ><img src="images/git_logo.png" alt="git logo"><figcaption>Git</figcaption></figure>
+      <figure class="language-logo" ><img src="images/sql_logo.png" alt="sql logo"><figcaption>SQL</figcaption></figure>
+      <figure class="language-logo" ><img src="images/bash_logo.png" alt="bash logo"><figcaption>BASH</figcaption></figure>
       <h3>Operating Systems</h3>
-      <figure class="language-logo" style="width:20%;"><img src="images/linux_logo.png" class="language-logo" alt="linux logo"><figcaption>Linux</figcaption></figure>
-      <figure class="language-logo" style="width:20%;"><img src="images/android_logo.png" class="language-logo" alt="android logo"><figcaption>Android</figcaption></figure>
+      <figure class="language-logo" ><img src="images/linux_logo.png" class="language-logo" alt="linux logo"><figcaption>Linux</figcaption></figure>
+      <figure class="language-logo" ><img src="images/android_logo.png" class="language-logo" alt="android logo"><figcaption>Android</figcaption></figure>
 
 
     </section>

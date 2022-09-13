@@ -15,14 +15,13 @@ Media Query Breakpoints:
     /*--background-page: radial-gradient(circle, rgba(63,94,251,.5) 0%, rgba(252,70,107,.5) 100%);*/
     --background-day: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgb(255, 102, 0) 100%);
     --background-day: linear-gradient(90deg, rgb(255, 0, 128) 0%, rgb(119, 0, 255) 50%, rgb(0, 4, 255) 100%);
+    --overlay-blur-mask: linear-gradient(#00000000 0%,#00000000 10%,#00000090 20%,#000000cc 50%,#00000090 80%,#00000000 100%);
     --background-night: linear-gradient(90deg, rgb(14, 0, 36) 0%, rgb(0, 2, 46) 50%, rgb(0, 10, 56) 100%);
     --youtube: rgb(255, 0, 0);
     --linkedin: #001dbe;
     --itch: rgb(143, 0, 0);
     --twitter: rgb(0, 217, 255);
 }
-
-
 
 h1,h2,h3,p, figcaption {
     font-family: 'IM Fell Great Primer';
@@ -37,9 +36,11 @@ h1,h2,h3,p, figcaption {
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
     max-width:100%;
+    margin:auto;
 }
 
 figure img .language-logo {
+
     margin: 0;
     padding: 0;
 
@@ -51,7 +52,8 @@ figure img {
     margin: auto;
     vertical-align: middle;
     width:100%;
-    height: 100%;
+    height:100%;
+    
 }
 
 .game-logo figure img  {
@@ -102,50 +104,43 @@ li {
 html, body {
     background: var(--background-day) space repeat;  
     background-color: #101010;  
-    /*background: var(--background-night) space repeat;*/
     
     background-size: 150% 150%;
 
     animation: gradient 6s ease infinite;
     width: 100%;
-    
-    margin: 0px;
-    padding: 0px;
+
     overflow: hidden;
     overscroll-behavior-y: none;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-    /*overflow: auto!important;
-max-height: 100% !important;*/
-    /*scroll-behavior: smooth;*/
-    overflow: hidden;
+    min-width: 200px;
+    margin: 0;
+    padding:0;
+
 }
-/* width */
+/* 
 ::-webkit-scrollbar {
     width: 10px;
     
   }
   
-  /* Track */
+ 
   ::-webkit-scrollbar-track {
     background: none;
   }
-  
-  /* Handle */
+ 
   ::-webkit-scrollbar-thumb {
     background: rgba(0,0,0,.45);
     border-radius: 5rem;
   }
-  
-  /* Handle on hover */
+ 
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+  */
 body { 
   
     text-align: center;
-    margin: 0;
-    overflow: hidden;
-    height: min-content;
     
 }
 
@@ -233,7 +228,7 @@ header:hover {
     padding: 0 0;
     margin: .15rem .35rem;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 50%;
     background-image: none;
     border: 0;
     background-color: transparent;
@@ -296,10 +291,6 @@ header:hover {
     margin: 0;
 }
 
-section {
-    display: inline-block;
-}
-
 @media only screen and (max-aspect-ratio: 1/1), (min-width: 300px), (max-width: 700px)  {
     .title {
         font-size: 2rem;
@@ -324,7 +315,8 @@ section {
     }
 
     figure {
-        width: 50vw;   
+        width: 18vw;   
+        padding:1%;
     }
 
 
@@ -349,7 +341,7 @@ section {
     }
 
     figure {
-        width: 10vw;   
+        width: 10.5vw;
     }
 
 
@@ -372,28 +364,6 @@ section {
         width: 55vw;   
     }
 
-}
-
-.subtitle {
-    /*text-align: center;*/
-    font-family: 'IM Fell Great Primer';
-    color : #d7d7d7;
-    transition: color .25s;
-    text-decoration: none; 
-    font-size: 15px;
-    font-weight: 750;
-    margin-top: 0%;
-    padding-top: 0%;
-    border-radius: 0;
-    line-height: 0em;
-    position: relative;
-    height: inherit;
-    float: left;
-    padding-left: 15px;
-    
-    font-size:  calc(6vw/4);
-
-    display:inline-block;
 }
 
 .title:hover {
@@ -436,20 +406,24 @@ header {
     font-family: 'IM Fell Great Primer';
     text-align: left;
     border-radius: 2px; 
+    font-size: 75%;
+    padding:1rem;
 }
 
 .page section {
-    min-width: 85%;
     max-width: 1200px;
+    display: inline-block;
+    width:90%;
+    max-width: 90vw;
 }
 
 .page li {
     margin: .1rem;
+    font-size: calc(clamp(12px,10vw,20px));
 }
 
 .page ul {
-    
-    width: calc(clamp(50px,50vw,1000px));
+    width: calc(clamp(300px,75vw,1000px));
     margin:auto;
 
 }
@@ -574,7 +548,6 @@ iframe {
     border-color: #f06d06;
     border: 1rem;
 
-    height: 100vh;
     clip-path: inset(100vw,90vh);
     overflow-y:scroll;
     min-height: 100vh;
@@ -654,6 +627,7 @@ iframe {
 }
 
 .language-logo, .game-logo {
+    max-width:25%;
     transition: transform .2s; /* Animation */
     text-align: center;
 }
@@ -662,19 +636,19 @@ iframe {
     transform: scale(1.05);
 }
 
-
 #img_jarod {
-    padding: 1rem;
-    width: 95vw;
+    width: 90vw;
     max-width: 500px;
+    margin: auto;
 }
 
-#contact-info h1 {
+#contact h1 {
     text-align: center;
     margin: 0;
     padding: 0;
 
 }
+
 
 #contact-info h2 {
     font-size: calc(clamp(.8rem,6.2vw,2.5rem));
@@ -699,7 +673,68 @@ iframe {
     font-size: calc(clamp(1.1rem,3vw,1.25rem));
 }
 
+#drexel-arms {
+    width: 25%;
+    min-width: 150px;
+    max-width: 250px;
+}
+
 .social.expanded {
     display: flexbox;
 }
  
+#text-underlay {
+    display: block;
+    position: fixed;
+    background: var(--overlay-blur-mask) space repeat;
+    overflow:auto;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+
+
+    pointer-events: none;
+}
+
+p, img, figure {
+    z-index: 2;
+}
+
+#drexel-background {
+    background-image: url(images/drexel_night.jpg); 
+    background-size: cover; 
+    display: inline-block;
+    background-position:25% 75%; 
+    min-height: 350px; margin: auto;
+    width: auto; padding: 1rem; 
+    border-radius: 1rem;  
+    --webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+#courses-grid {
+    margin:auto;
+    width:90%;
+
+    
+ 
+}
+
+label {
+    font-size:20%;
+}
+
+#courses-grid div {
+    display:inline-block;
+    text-align: center;
+    padding:3%;
+    margin:auto;
+
+    width:calc(clamp(200px,10%,1000px));
+
+    font-size:calc(clamp(1.5vw,10%,2.2vw));
+}
+
